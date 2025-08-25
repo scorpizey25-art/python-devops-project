@@ -1,1 +1,3 @@
-print ("project pertama menggunakan python !!!")
+def tambah_angka ( a, b ):
+    return a + b
+
