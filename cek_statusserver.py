@@ -27,4 +27,17 @@ def kelolahServer():
     server_web.set_status(STATUS_AKTIF)
 
 
-kelolahServer()
+# kelolahServer()
+
+# Fungsi baru yang akan kita uji
+def validasi_ip_address(ip_address):
+    """
+    Memvalidasi format dasar alamat IP.
+    """
+    parts = ip_address.split('.')
+    if len(parts) != 4:
+        return False
+    for part in parts:
+        if not part.isdigit() or not 0 <= int(part) <= 255:
+            return False
+    return True
